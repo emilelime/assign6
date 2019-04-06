@@ -1,6 +1,7 @@
 import javafoundations.CircularArrayQueue;
 /**
  * Write a description of class BoundedQueue here.
+ * random comment
  *
  * @author (your name)
  * @version (a version number or a date)
@@ -32,23 +33,23 @@ public class BoundedQueue<T> extends CircularArrayQueue
         // put your code here
         return (size() == DEFAULT_CAPACITY);
     }
-    
+
     /**
      * enqueues an element if the queue is not at capacity
      * @param element the element to be enqueued
      */
     /*public void enqueue (element)
-    { 
+    {
         if (!isFull()){
             queue[rear] = element;
             rear = (rear+1) % queue.length;
             count++;
         }
     }*/
-    
-    
+
+
     public static void main (String[] args)
-    { 
+    {
         BoundedQueue bq = new BoundedQueue();
         // testing is full on empty bounded queue, expect false
         bq.isFull();

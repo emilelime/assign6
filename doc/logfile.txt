@@ -1,0 +1,41 @@
+Class documentation
+<---- javadoc command: ---->
+/Applications/BlueJ 4.1.2/BlueJ.app/Contents/JDK/Home/bin/javadoc
+-author
+-version
+-nodeprecated
+-package
+-Xdoclint:none
+-noindex
+-notree
+-nohelp
+-nonavbar
+-source
+1.8
+-classpath
+/Applications/BlueJ 4.1.2/BlueJ.app/Contents/Resources/Java/bluejcore.jar:/Applications/BlueJ 4.1.2/BlueJ.app/Contents/Resources/Java/junit-4.11.jar:/Applications/BlueJ 4.1.2/BlueJ.app/Contents/Resources/Java/hamcrest-core-1.3.jar:/Applications/BlueJ 4.1.2/BlueJ.app/Contents/Resources/Java/lang-stride.jar:/Applications/BlueJ 4.1.2/BlueJ.app/Contents/Resources/Java/userlib/pi4j-core.jar:/Applications/BlueJ 4.1.2/BlueJ.app/Contents/Resources/Java/userlib/pi4j-device.jar:/Applications/BlueJ 4.1.2/BlueJ.app/Contents/Resources/Java/userlib/pi4j-gpio-extension.jar:/Applications/BlueJ 4.1.2/BlueJ.app/Contents/Resources/Java/userlib/pi4j-service.jar:/Users/eyin/Desktop/Lab7Project
+-d
+/Users/eyin/Desktop/Lab7Project/doc
+-encoding
+UTF-8
+-charset
+UTF-8
+/Users/eyin/Desktop/Lab7Project/javafoundations/LinkedQueue.java
+<---- end of javadoc command ---->
+Loading source file /Users/eyin/Desktop/Lab7Project/javafoundations/LinkedQueue.java...
+Constructing Javadoc information...
+Standard Doclet version 1.8.0_144
+Building tree for all the packages and classes...
+Generating /Users/eyin/Desktop/Lab7Project/doc/javafoundations/LinkedQueue.html...
+/Users/eyin/Desktop/Lab7Project/javafoundations/LinkedQueueComplete.java:11: error: class LinkedQueue is public, should be declared in a file named LinkedQueue.java
+public class LinkedQueue<T> implements Queue<T> {
+       ^
+Generating /Users/eyin/Desktop/Lab7Project/doc/javafoundations/package-frame.html...
+Generating /Users/eyin/Desktop/Lab7Project/doc/javafoundations/package-summary.html...
+Generating /Users/eyin/Desktop/Lab7Project/doc/constant-values.html...
+Building index for all the packages and classes...
+Building index for all classes...
+Generating /Users/eyin/Desktop/Lab7Project/doc/allclasses-frame.html...
+Generating /Users/eyin/Desktop/Lab7Project/doc/allclasses-noframe.html...
+Generating /Users/eyin/Desktop/Lab7Project/doc/index.html...
+1 error

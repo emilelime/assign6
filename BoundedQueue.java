@@ -1,60 +1,63 @@
 import javafoundations.CircularArrayQueue;
+import javafoundations.Queue;
 /**
- * Write a description of class BoundedQueue here.
- * random comment
+ * BoundedQueue implements a bounded queue ADT. A bounded queue is a queue 
+ * with a maximum capacity (no elements can be enqueued when the queue is full to capacity). 
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Shirley Lei, Emily Yin
+ * @version April 8th, 2019
  */
-public class BoundedQueue<T> extends CircularArrayQueue
-{
-    // instance variables - replace the example below with your own
-    // A constructor that takes an integer argument corresponding to the capacity of the bounded queue
-    // A predicate isFull() that indicates if the bounded queue is at capacity or not
-    // An enqueue method that overrides the javafoundations.CircularArrayQueue enqueue method and only enqueues an element if the queue is not at capacity
-    private final int DEFAULT_CAPACITY = 10;
+public class BoundedQueue<T> extends CircularArrayQueue<T>{
+
+    private final int CAPACITY; //? should this be final
 
     /**
      * Constructor for objects of class BoundedQueue
      */
-    public BoundedQueue()
-    {
+    public BoundedQueue(int capacity){
         // initialise instance variables
-        super();
+        super(); //invokes CircularArrayQueue's constructor
+        CAPACITY = capacity;
         //boundedQueue = (T[]) (new Object[DEFAULT_CAPACITY]);
     }
 
     /**
-     * A predicate isFull() that indicates if the bounded queue is at capacity or not
-     * @return boolean, true if bounded queue is at capacity, false otherwise
+     * A predicate that indicates if the bounded queue is at capacity or not
+     * @return boolean true if bounded queue is at capacity, false otherwise
      */
-    public boolean isFull()
-    {
-        // put your code here
-        return (size() == DEFAULT_CAPACITY);
+    public boolean isFull(){
+        return (size() == CAPACITY);
     }
 
     /**
-     * enqueues an element if the queue is not at capacity
+     * Enqueues an element if the queue is not at capacity
      * @param element the element to be enqueued
+     * @Override
      */
-    /*public void enqueue (element)
-    {
+    public void enqueue (T element) {
         if (!isFull()){
-            queue[rear] = element;
-            rear = (rear+1) % queue.length;
-            count++;
+            //? how to override parent's method without needed to use 
+            //parent's private vars e.g. queue?
+            //Also, why can't I use parent's instance vars despite 
+
+            super.enqueue(element);
+            // queue[rear] = element;
+            // rear = (rear+1) % queue.length;
+            // count++;
         }
-    }*/
+    }
 
-
-    public static void main (String[] args)
-    {
-        BoundedQueue bq = new BoundedQueue();
+    /**
+     * Trivial (preliminary) testing for BoundedQueue methods
+     * @param args an array string (unused in this case)
+     */
+    public static void main (String[] args){
+        BoundedQueue bq = new BoundedQueue(10);
         // testing is full on empty bounded queue, expect false
         bq.isFull();
         bq.enqueue("hi");
         // expect true
         bq.isFull();
+        //test enqueue on bq at CAPACITY, expect no enqueuing
     }
 }

@@ -36,14 +36,12 @@ public class BoundedQueue<T> extends CircularArrayQueue<T>{
      */
     public void enqueue (T element) {
         if (!isFull()){
-            //? how to override parent's method without needed to use 
-            //parent's private vars e.g. queue?
-            //Also, why can't I use parent's instance vars despite 
-
             super.enqueue(element);
             // queue[rear] = element;
             // rear = (rear+1) % queue.length;
             // count++;
+        } else{
+            return;
         }
     }
 
